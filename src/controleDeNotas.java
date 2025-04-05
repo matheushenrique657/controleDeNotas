@@ -9,9 +9,7 @@ public class controleDeNotas {
     double soma = 0;
     double somaMedia = 0;
     double media = 0;
-    int aprovados = 0;
-    int recuperacao = 0;
-    int reprovado = 0;
+
     String status = "";
 
     Scanner entrada = new Scanner(System.in);
@@ -21,7 +19,9 @@ public class controleDeNotas {
     System.out.println("Quantos alunos deseja cadastrar?: ");
     int quantidade = entrada.nextInt();
     entrada.nextLine();
-
+        int aprovados = 0;
+        int recuperacao = 0;
+        int reprovado = 0;
     String[] nomes = new String[quantidade];
     Double[][] notas = new Double[quantidade][2];
     ArrayList<Double> medias = new ArrayList<>();
