@@ -4,13 +4,6 @@ import java.util.ArrayList;
 public class controleDeNotas {
     public static void main(String[] args) {
     char loop;
-    double maiorNota = -1;
-    double menorNota = 11;
-    double soma = 0;
-    double somaMedia = 0;
-    double media = 0;
-
-    String status = "";
 
     Scanner entrada = new Scanner(System.in);
     do{
@@ -22,7 +15,14 @@ public class controleDeNotas {
         int aprovados = 0;
         int recuperacao = 0;
         int reprovado = 0;
-    String[] nomes = new String[quantidade];
+        double maiorNota = -1;
+        double menorNota = 11;
+        double soma = 0;
+        double somaMedia = 0;
+        double media = 0;
+        String status = "";
+
+        String[] nomes = new String[quantidade];
     Double[][] notas = new Double[quantidade][2];
     ArrayList<Double> medias = new ArrayList<>();
 
@@ -34,7 +34,7 @@ public class controleDeNotas {
         notas[i][j] = entrada.nextDouble();
 
         while (notas[i][j] <0 || notas[i][j] > 10) {
-            System.out.println("Nota inválida! Digite uma nota entre 1 e 10: ");
+            System.out.println("Nota inválida! Digite uma nota entre 0 e 10: ");
             notas[i][j] = entrada.nextDouble();
         }
         }
